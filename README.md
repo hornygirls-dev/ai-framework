@@ -30,7 +30,59 @@ A powerful, flexible framework for building and deploying intelligent AI agents 
   - High availability configuration
 
 ## 🔧 Technical Architecture
+## System Architecture
 
+```mermaid
+graph TD
+    subgraph AI_Layer[AI Services]
+        OpenAI[OpenAI]
+        Meta[Meta AI]
+        Together[Together.ai]
+        Anthropic[Anthropic]
+        LUMA[LUMA AI]
+        Claude[Claude]
+    end
+
+    subgraph Blockchain_Layer[Blockchain Integration]
+        ETH[Ethereum]
+        NEAR[NEAR]
+        SUI[SUI Protocol]
+        APT[Aptos]
+        ZKS[zkSync]
+    end
+
+    subgraph Storage_Layer[Data Storage]
+        PG[(PostgreSQL)]
+        Redis[(Redis)]
+        Supabase[(Supabase)]
+        SQLite[(SQLite)]
+    end
+
+    subgraph Core[Core System]
+        Runtime[Agent Runtime]
+        Plugin[Plugin System]
+        Adapter[Adapters]
+        Character[Character System]
+    end
+
+    subgraph Clients[Client Integration]
+        Web[Web Client]
+        Twitter[Twitter]
+        Discord[Discord]
+        Telegram[Telegram]
+        Slack[Slack]
+        GitHub[GitHub]
+    end
+
+    AI_Layer --> Plugin
+    Blockchain_Layer --> Plugin
+    Plugin --> Runtime
+    Storage_Layer --> Adapter
+    Adapter --> Runtime
+    Character --> Runtime
+    Runtime --> Clients
+
+```
 ### Data Layer
 - Vector database (PineCone) for efficient semantic search
 - PostgreSQL for structured data storage
