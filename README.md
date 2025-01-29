@@ -35,6 +35,7 @@ A powerful, flexible framework for building and deploying intelligent AI agents 
 ```mermaid
 graph TD
     subgraph AI_Layer[AI Services]
+        HGLS[Model]
         OpenAI[OpenAI]
         Meta[Meta AI]
         Together[Together.ai]
@@ -44,6 +45,7 @@ graph TD
     end
 
     subgraph Blockchain_Layer[Blockchain Integration]
+        SOL[Solana]
         ETH[Ethereum]
         NEAR[NEAR]
         SUI[SUI Protocol]
