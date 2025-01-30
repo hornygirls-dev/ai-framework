@@ -1,0 +1,30 @@
+{
+  "short_name": "AI Girls",
+  "name": "Horny Girls Fun - Hot AI Girls",
+  "icons": [
+    {
+      "src": "girls/favicon.jpg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/webp"
+    },
+    {
+      "src": "girls/7.jpg",
+      "type": "image/webp",
+      "sizes": "192x192"
+    },
+    {
+      "src": "girls/7.jpg",
+      "type": "image/webp",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#f97101",
+  "background_color": "#ffffff",
+  "orientation": "portrait",
+  "description": "Meet and chat with the hottest AI Girls. Experience meaningful conversations and build unique relationships with our diverse community of AI personalities.",
+  "categories": ["social", "entertainment"],
+  "lang": "en",
+  "dir": "ltr"
+}

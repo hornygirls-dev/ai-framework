@@ -1,0 +1,109 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: #343232;
+  border-top: 1px solid #5c5757;
+  position: relative;
+  z-index: 1;
+  gap: 5px;
+}
+
+.premiumButton {
+  background: var(--message-bg-ai);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  width: 90px;
+  height: 104px;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.premiumButton.active:not(.locked) {
+  background: var(--primary-color);
+}
+
+.buttonIcon {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+.buttonText {
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.buttonCost {
+  font-size: 11px;
+  color: #de8b11;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.locked {
+  position: relative;
+  opacity: 0.5;
+  cursor: not-allowed;
+  overflow: hidden;
+  background: var(--message-bg-ai) !important;
+}
+
+.locked::after {
+  content: 'Soon';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.payment {
+  background: linear-gradient(135deg, #0061a0, #17df82);
+}
+
+.payment.active {
+  background: linear-gradient(135deg, #005490, #15cf78) !important;
+}
+
+.loadingSpinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spinner 1s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

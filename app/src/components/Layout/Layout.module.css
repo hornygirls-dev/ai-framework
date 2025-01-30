@@ -1,0 +1,105 @@
+.gradientBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background: #0a0011;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.liquidShape {
+  position: absolute;
+  width: 100dvw;
+  height: 100dvh;
+  filter: blur(30px);
+  mix-blend-mode: screen;
+  background: radial-gradient(
+      800px circle at 50% 50%,
+      rgba(255, 0, 255, 0.25),
+      transparent 70%
+    ),
+    radial-gradient(
+      900px circle at 80% 20%,
+      rgba(0, 255, 255, 0.25),
+      transparent 70%
+    ),
+    radial-gradient(
+      800px circle at 20% 80%,
+      rgba(255, 255, 0, 0.25),
+      transparent 70%
+    ),
+    radial-gradient(
+      700px circle at 80% 80%,
+      rgba(255, 0, 128, 0.25),
+      transparent 70%
+    ),
+    radial-gradient(
+      900px circle at 20% 20%,
+      rgba(0, 255, 128, 0.25),
+      transparent 70%
+    ),
+    radial-gradient(
+      800px circle at 60% 40%,
+      rgba(128, 0, 255, 0.25),
+      transparent 70%
+    ),
+    radial-gradient(
+      700px circle at 40% 60%,
+      rgba(255, 128, 0, 0.25),
+      transparent 70%
+    ),
+    radial-gradient(
+      900px circle at 70% 90%,
+      rgba(0, 128, 255, 0.25),
+      transparent 70%
+    );
+  animation: morphBackground 15s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+.appContainer {
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .appContainer {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto;
+    height: calc(100dvh - 40px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes morphBackground {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-5%, 5%) scale(1.1);
+  }
+  50% {
+    transform: translate(5%, -5%) scale(0.95);
+  }
+  75% {
+    transform: translate(-3%, -3%) scale(1.05);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}

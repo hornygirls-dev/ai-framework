@@ -1,0 +1,51 @@
+.header {
+  background: #000;
+  color: #f90101;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.walletStatus {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.walletStatus.connected {
+  background: rgba(46, 204, 113, 0.3);
+}
+
+.tokenDisplay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .header {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}
